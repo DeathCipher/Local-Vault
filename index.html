@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src https://deathcipher.github.io; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LocalVault: a password manager that stays on your computer</title>
+<meta name="description" content="Download LocalVault for Windows. An encrypted password manager with no account and no cloud.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#eceff0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101315" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LocalVault">
+<meta property="og:title" content="LocalVault: a password manager that stays on your computer">
+<meta property="og:description" content="Download LocalVault for Windows. An encrypted password manager with no account and no cloud.">
+<link rel="icon" href="assets/images/localvault.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/images/localvault-64.png">
+<link rel="apple-touch-icon" href="assets/images/localvault-256.png">
+<script src="assets/javascript/theme-init.js"></script>
+<link rel="preconnect" href="https://deathcipher.github.io" crossorigin>
+<link rel="preload" href="https://deathcipher.github.io/Website-Fonts/Norrvik-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://deathcipher.github.io/Website-Fonts/Norrvik-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/norrvik.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LocalVault",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Windows 10, Windows 11",
+  "description": "An encrypted password manager for Windows with no account and no cloud."
+}
+</script>
+</head>
+<body data-root="">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+  <header class="site-head">
+    <a class="brand" href="index.html"><img src="assets/images/localvault-64.png" alt="" width="34" height="34"><span>LocalVault</span></a>
+    <div class="head-tools">
+      <nav aria-label="Main">
+      <a href="index.html" aria-current="page">Download</a>
+      <a href="pages/install.html">Install guide</a>
+      <a href="pages/security.html">How it protects you</a>
+      </nav>
+      <label class="theme"><span>Theme</span>
+        <select id="theme-select">
+          <option value="system">System</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+    </div>
+  </header>
+</div>
+
+<main id="main">
+  <div class="wrap hero">
+    <div>
+      <h1>A password manager that never leaves your computer</h1>
+      <p class="lede">LocalVault keeps your logins in one encrypted file on your own PC. There&rsquo;s no account to create, no cloud to trust and no network connection.</p>
+      <p class="fine">For Windows 10 and 11 (64-bit). Each PC keeps its own separate vault, so nothing is shared or synced between computers.</p>
+    </div>
+
+    <div class="vault" id="download">
+      <div class="vault-top">
+        <svg class="padlock" viewBox="0 0 64 64" aria-hidden="true">
+          <path class="shackle" d="M20 30V20a12 12 0 0 1 24 0v10"/>
+          <rect class="body" x="10" y="28" width="44" height="30" rx="7"/>
+          <circle class="key" cx="32" cy="41" r="4"/>
+          <rect class="key" x="30" y="43" width="4" height="9" rx="1"/>
+        </svg>
+        <div>
+          <h2>LocalVault</h2>
+          <p class="version">Version <span data-release="version">1.0.0</span> for Windows</p>
+        </div>
+      </div>
+
+      <a class="btn" href="assets/downloads/localvault.msi" download data-download>Download localvault.msi</a>
+      <p class="status" id="dl-status" role="status" aria-live="polite"></p>
+      <p class="note-os" id="platform-note" hidden>This installer only works on Windows. Open this page on a Windows PC to install LocalVault.</p>
+
+      <dl class="facts">
+        <div><dt>Size</dt><dd data-release="size">16.2 MB</dd></div>
+        <div><dt>Released</dt><dd data-release="date">23 November 2026</dd></div>
+        <div>
+          <dt>SHA-256</dt>
+          <dd class="hash-row">
+            <code class="hash" id="hash-main" data-release="sha256">3e8c807b02f218ce443426534049845136844f18ff52671badd6be4cbde45b60</code>
+            <button class="copy" type="button" data-copy-target="hash-main" aria-label="Copy the SHA-256 checksum">Copy</button>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <section class="block" aria-labelledby="what-it-does">
+    <div class="wrap">
+      <h2 id="what-it-does">What LocalVault does</h2>
+      <p class="intro">It does the everyday jobs of a password manager and keeps everything on the computer you installed it on.</p>
+      <dl class="traits">
+        <div><dt>Encrypts your vault</dt><dd>Your logins are stored in a single file protected with AES-256. The key comes from your master password, and nothing is ever sent over the network.</dd></div>
+        <div><dt>Locks itself</dt><dd>After 5 minutes without activity the vault locks and asks for your master password again.</dd></div>
+        <div><dt>Clears the clipboard</dt><dd>A password you copy is removed from the clipboard after 20 seconds, and as soon as the vault locks.</dd></div>
+        <div><dt>Creates strong passwords</dt><dd>Generate a random password of the length you choose, and watch the strength meter as you type your own.</dd></div>
+        <div><dt>Backs up and imports</dt><dd>Save an encrypted backup that&rsquo;s still locked with your master password. You can also export a plain CSV to move to another manager (it isn&rsquo;t encrypted, so delete it afterwards), and import logins from a CSV.</dd></div>
+        <div><dt>Works offline</dt><dd>There&rsquo;s nothing to sign in to and nothing to update online. Install it once and it keeps working.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="install-steps">
+    <div class="wrap">
+      <h2 id="install-steps">Install it in four steps</h2>
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>Download the installer</h3>
+            <p>Use the Download button above. The file is called localvault.msi.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Open it</h3>
+            <p>Windows may say it doesn&rsquo;t recognise the publisher, because the installer isn&rsquo;t code-signed. Choose More info, then Run anyway.</p>
+            <p class="more"><a href="pages/install.html#blocked">Why Windows shows this warning</a></p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Choose where it goes</h3>
+            <p>It installs to Program Files by default. Use Browse to pick another folder, and untick Desktop shortcut if you don&rsquo;t want an icon on your desktop.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Create your master password</h3>
+            <p>Open LocalVault from the Start menu or desktop and choose a master password. It must be at least 12 characters and hard to guess. There&rsquo;s no way to recover it if you forget it.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>LocalVault <span data-release="version">1.0.0</span> for Windows</span>
+    <span>No trackers or analytics. Only the font loads from another host.</span>
+  </div>
+</footer>
+<script src="assets/javascript/theme.js"></script>
+<script src="assets/javascript/main.js"></script>
+</body>
+</html>

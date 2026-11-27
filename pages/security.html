@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src https://deathcipher.github.io; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How LocalVault protects you</title>
+<meta name="description" content="How LocalVault encrypts your passwords, and what it can&rsquo;t protect against.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#eceff0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101315" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LocalVault">
+<meta property="og:title" content="How LocalVault protects you">
+<meta property="og:description" content="How LocalVault encrypts your passwords, and what it can&rsquo;t protect against.">
+<link rel="icon" href="../assets/images/localvault.ico" sizes="any">
+<link rel="icon" type="image/png" href="../assets/images/localvault-64.png">
+<link rel="apple-touch-icon" href="../assets/images/localvault-256.png">
+<script src="../assets/javascript/theme-init.js"></script>
+<link rel="preconnect" href="https://deathcipher.github.io" crossorigin>
+<link rel="preload" href="https://deathcipher.github.io/Website-Fonts/Norrvik-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://deathcipher.github.io/Website-Fonts/Norrvik-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/norrvik.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+  <header class="site-head">
+    <a class="brand" href="../index.html"><img src="../assets/images/localvault-64.png" alt="" width="34" height="34"><span>LocalVault</span></a>
+    <div class="head-tools">
+      <nav aria-label="Main">
+      <a href="../index.html">Download</a>
+      <a href="install.html">Install guide</a>
+      <a href="security.html" aria-current="page">How it protects you</a>
+      </nav>
+      <label class="theme"><span>Theme</span>
+        <select id="theme-select">
+          <option value="system">System</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+    </div>
+  </header>
+</div>
+
+<main id="main" class="wrap page">
+  <h1>How LocalVault protects you</h1>
+  <p class="lede">What it does with your passwords, and the limits you should know about before you rely on it.</p>
+
+  <div class="prose">
+    <h2>What it does</h2>
+    <p>Your logins are stored in a single file on your PC, encrypted with AES-256-GCM. The key is made from your master password using scrypt, a method designed to make guessing passwords slow. LocalVault never connects to the internet, and nothing leaves your computer.</p>
+    <p>It insists on a master password of at least 12 characters that is hard to guess, because the whole vault is only as strong as that one password.</p>
+    <div class="callout"><p>There is no password recovery. There&rsquo;s no account or server that could reset your master password, so if you forget it, the vault can&rsquo;t be opened.</p></div>
+
+    <h2>What it can&rsquo;t protect against</h2>
+    <ul class="limits">
+      <li><strong>Memory on a running PC</strong>Programs written in Python can&rsquo;t wipe secrets from memory. &ldquo;Locked&rdquo; means the vault is closed in the app, not erased from RAM, so someone who copies the memory of the running program could find your key or passwords.</li>
+      <li><strong>Swapping in an old vault file</strong>Anyone who can write to your vault file could replace it with an older valid copy, including the backup, without knowing your password. A single file on its own can&rsquo;t detect that.</li>
+      <li><strong>Clipboard history</strong>LocalVault clears what it copies after 20 seconds and when it locks. Windows clipboard history (Win+V) and cloud clipboards can still keep their own copy, so turn those off for best results.</li>
+      <li><strong>Changing your master password</strong>This deletes the backup file, because the backup is still protected by your old password.</li>
+    </ul>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>LocalVault <span data-release="version">1.0.0</span> for Windows</span>
+    <span>No trackers or analytics. Only the font loads from another host.</span>
+  </div>
+</footer>
+<script src="../assets/javascript/theme.js"></script>
+<script src="../assets/javascript/main.js"></script>
+</body>
+</html>
